@@ -1,9 +1,34 @@
 var express = require('express');
 var router = express.Router();
+const { query } = require('../models/db');
+
+router.get('/', function (req, res, next) {
+});
+
+router.get('/:id', async function (req, res, next) {
+  try {
+    const user = await query(
+      'SELECT * FROM users WHERE id = ?',
+      req.params.id
+    );
+    
+    console.log(user);
+
+    res.json({
+      status: 200,
+      user: user,
+    });
+
+  } catch (e) {
+    console.error(e);
+    next(e);
+  }
+});
+
+
+
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
 
 module.exports = router;
