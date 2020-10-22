@@ -2,25 +2,21 @@ var express = require('express');
 var router = express.Router();
 const { query } = require('../models/db');
 
-router.get('/', function (req, res, next) {
-  res.json({
-    status: 200,
-    msg: 'funkar',
-  });
-});
-
 router.get('/:id', async function (req, res, next) {
   try {
-    const user = await query(
-      'SELECT * FROM story WHERE id = ?',
-      req.params.id
-    );
+    const story = await query(
+        'SELECT * FROM story WHERE id = ?',
+        req.params.id
+      );
+      const links = await query(
+        'SELECT * FROM links WHERE story_id = ?',
+        req.params.id
+      );
     
-    console.log(user);
 
-    res.json({
-      status: 200,
-      user: user,
+    res.render("story",{
+     story: story, 
+     links:links
     });
     
   } catch (e) {
