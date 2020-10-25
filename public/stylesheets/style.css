@@ -1,8 +1,35 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: aqua;
+}
 
 a {
-  color: #00B7FF; }
+  color: #00B7FF;
+  margin-left: 25px;
+ }
+::marker{
+  margin-left: 25px;
+}
+p{
+  margin-left: 38%;  
+  margin-bottom: 70px;
+  margin-top: 9%;
+}
+li{
+  margin-left: 25%;
+}
+/*flex-direction: column
+display: flex
+justify-content: space-between
+
+
+
+
+
+
+
+
+
 
 /*# sourceMappingURL=style.css.map */

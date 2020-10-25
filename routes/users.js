@@ -8,21 +8,20 @@ router.get('/', function (req, res, next) {
     msg: 'funkar',
   });
 });
-
 router.get('/:id', async function (req, res, next) {
   try {
     const user = await query(
-      'SELECT * FROM story WHERE id = ?',
+      'SELECT * FROM links WHERE id = ?',
       req.params.id
     );
     
     console.log(user);
 
-    res.json({
+    res.story({
       status: 200,
       user: user,
     });
-    
+
   } catch (e) {
     console.error(e);
     next(e);

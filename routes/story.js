@@ -12,7 +12,6 @@ router.get('/:id', async function (req, res, next) {
         'SELECT * FROM links WHERE story_id = ?',
         req.params.id
       );
-    
 
     res.render("story",{
      story: story, 
@@ -25,10 +24,6 @@ router.get('/:id', async function (req, res, next) {
   }
 });
 
-
-
-
 /* GET users listing. */
-
 
 module.exports = router;
