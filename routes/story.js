@@ -13,17 +13,22 @@ router.get('/:id', async function (req, res, next) {
         req.params.id
       );
 
+
     res.render("story",{
      story: story, 
      links:links
     });
-    
+
   } catch (e) {
     console.error(e);
     next(e);
   }
 });
 
+
+
+
 /* GET users listing. */
 
-module.exports = router;
+
+module.exports = router; 
