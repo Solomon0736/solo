@@ -5,7 +5,8 @@ a {
   color: #00B7FF;
   font-size: large;
   font-family: unset;
-  text-decoration-line: initial; }
+  text-decoration-line: initial;
+  background-color: mintcream; }
 
 p {
   max-width: 40rem;
@@ -18,20 +19,26 @@ li {
 
 .right {
   color: blue;
-  margin-left: 2%; }
+  margin-left: 0rem; }
 
-h1 {
-  padding-top: 5%;
-  margin-left: 28%;
+nav {
+  margin-bottom: 6%;
+  font-size: xx-large;
+  padding-top: 6%;
+  padding-left: 29%;
   color: deeppink; }
 
 footer {
-  margin-top: 14%;
+  margin-top: 15%;
   margin-left: 35%; }
 
 ul {
-  margin-left: 17rem;
+  margin-left: 21rem;
   display: flex;
   list-style: none; }
+
+/*.main
+  width:60%
+  margin:0 auto*/
 
 /*# sourceMappingURL=style.css.map */
